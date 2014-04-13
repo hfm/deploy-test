@@ -33,10 +33,10 @@ Vagrant.configure("2") do |config|
     c.vm.network :private_network, ip: "192.168.33.12"
   end
 
-  # config.vm.provision :puppet do |p|
-  #   p.manifests_path = "manifests"
-  #   p.module_path    = ["modules", "roles"]
-  #   p.manifest_file  = "site.pp"
-  #   p.options = "--verbose --show_diff"
-  # end
+  config.vm.provision :puppet do |p|
+    p.manifests_path = "manifests"
+    p.module_path    = ["modules", "roles"]
+    p.manifest_file  = "site.pp"
+    p.options = "--verbose --show_diff --detailed-exitcodes --ignorecache"
+  end
 end
