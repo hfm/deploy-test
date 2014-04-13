@@ -16,15 +16,15 @@ RSpec.configure do |c|
   c.before :all do
     block = self.class.metadata[:example_group_block]
     file = block.source_location.first
-    host  = File.basename(Pathname.new(file).dirname)
-    host = ENV['TARGET_HOST'] if ENV['TARGET_HOST']
-    role = ENV['TARGET_ROLE'] if ENV['TARGET_ROLE']
+    role = File.basename(Pathname.new(file).dirname)
+    host = "#{role}.deploy.dev"
 
     if c.host != host
       c.ssh.close if c.ssh
       c.host  = host
       options = Net::SSH::Config.for(c.host)
       user    = options[:user] || Etc.getlogin
+
       vagrant_up = `vagrant up #{role}`
       config = `vagrant ssh-config #{role}`
 
@@ -42,7 +42,7 @@ RSpec.configure do |c|
         end
       end
 
-      c.ssh   = Net::SSH.start(host, user, options)
+      c.ssh = Net::SSH.start(host, user, options)
     end
   end
 end
