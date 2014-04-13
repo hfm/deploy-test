@@ -4,7 +4,7 @@
 Vagrant.require_version ">= 1.5.0"
 
 Vagrant.configure("2") do |config|
-  config.vm.box_url = "hfm4/centos-with-docker"
+  config.vm.box = "hfm4/centos-with-docker"
 
   config.vm.provider :virtualbox do |vb|
     # http://shibayu36.hatenablog.com/entry/2013/08/12/090545
