@@ -1,0 +1,5 @@
+class manage {
+
+  include base
+
+}

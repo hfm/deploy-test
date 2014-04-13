@@ -1,0 +1,24 @@
+{
+  "name": "hfm-xbuild",
+  "version": "0.1.1",
+  "source": "UNKNOWN",
+  "author": "hfm",
+  "license": "MIT",
+  "summary": "xbuild module",
+  "description": "xbuild module",
+  "project_page": "https://github.com/tacahilo/puppet-xbuild",
+  "dependencies": [
+
+  ],
+  "types": [
+
+  ],
+  "checksums": {
+    "Modulefile": "6413cbbb8bcb9d9ad75e696cc5f93da5",
+    "README.md": "a78234f528e7a4d10d3040fb1b8fde55",
+    "manifests/init.pp": "85df59613d29901d3030e1194d598775",
+    "manifests/install.pp": "989ba61d19e3d38fef5062d713084c51",
+    "manifests/lang/install.pp": "c445c00b7bf39f341af8bc9ec76283f1",
+    "tests/init.pp": "46c9f08d9e2909229c443a791ca1ee4b"
+  }
+}
