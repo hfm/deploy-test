@@ -37,6 +37,6 @@ Vagrant.configure("2") do |config|
     p.manifests_path = "manifests"
     p.module_path    = ["modules", "roles"]
     p.manifest_file  = "site.pp"
-    p.options = "--verbose --show_diff --detailed-exitcodes --ignorecache"
+    p.options = "--verbose --show_diff --detailed-exitcodes"
   end
 end
