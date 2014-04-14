@@ -1,6 +1,7 @@
 class manage {
 
   include ::base
+  include manage::file
   include ::capistrano
 
   Class['::base']
