@@ -1,8 +1,13 @@
 class base::package {
 
   $packages =[
+    'gcc',
+    'gcc-c++',
     'git',
-    'openssl-devel'
+    'make',
+    'openssl-devel',
+    'patch',
+    'zlib-devel',
   ]
 
   package { $packages:
