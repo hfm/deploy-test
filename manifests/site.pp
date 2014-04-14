@@ -1,11 +1,11 @@
 node 'manage.deploy.dev' {
-  include manage
+  include ::manage
 }
 
 node 'one.deploy.dev' {
-  include target
+  include ::target
 }
 
 node 'two.deploy.dev' {
-  include target
+  include ::target
 }
