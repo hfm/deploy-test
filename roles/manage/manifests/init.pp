@@ -28,4 +28,11 @@ class manage {
     target  => '/usr/local/python-2.7.6/bin/pip',
   }
 
+  exec { 'install-cinnamon':
+    command => 'cpanm Cinnamon',
+    user    => 'root',
+    path    => '/usr/local/perl-5.18.2/bin:/usr/bin:/bin',
+    creates => '/usr/local/perl-5.18.2/bin/cinnamon',
+  }
+
 }
