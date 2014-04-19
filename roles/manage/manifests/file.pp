@@ -1,6 +1,9 @@
 class manage::file {
 
   file {
+    '/etc/profile.d/perl.sh':
+      source => 'puppet:///modules/manage/etc/profile.d/perl.sh';
+
     '/etc/profile.d/ruby.sh':
       source => 'puppet:///modules/manage/etc/profile.d/ruby.sh';
 
