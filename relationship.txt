@@ -1,0 +1,2 @@
+[ manage ] - deploy -> { start: south, 0; end: north,0; } [ one ] { origin: manage; offset: -1,3 }
+[ manage ] - deploy -> { start: south, 0; end: north,0; } [ two ] { origin: manage; offset: 1,3 }
