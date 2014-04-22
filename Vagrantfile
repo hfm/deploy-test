@@ -16,6 +16,9 @@ Vagrant.configure("2") do |config|
 
     vb.customize ["modifyvm", :id, "--nic2", "intnet"]
     vb.customize ["modifyvm", :id, "--intnet2", "internal_network"]
+
+    vb.memory = 512
+    vb.cpus = 1
   end
 
   config.vm.define :manage do |c|
