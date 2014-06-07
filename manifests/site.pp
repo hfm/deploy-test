@@ -1,3 +1,5 @@
+Package { allow_virtual => true }
+
 node 'manage.deploy.dev' {
   include ::manage
 }
